@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Pompiere&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+<div id="main">
+    <video id="img-1" src="/images/dark-video.mp4" autoplay muted loop></video>
+    <video id="img-2" src="/images/light-video.mp4"  ></video>
+
+    <div id="preloader">
+        <div class="p">WELCOME</div>
+    </div>
+
+    <div class="control">
+        <div style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 70vh;position: absolute;" >
+            <button class="btn">
+                continue
+            </button>
+        </div>
+        <div class="track">
+            <div class="dragme"> 
+                <div class="arrow"></div>
+                <div class="dragme-child"></div>
+            </div>
+            <p class="dragme-text">dragme</p>
+
+
+            <div class="circle-p-copy">
+                <div class="circle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                <!-- <div class="circle-copy"></div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="pace.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+
+<script src="script.js"></script>    
+</body>
+</html>
