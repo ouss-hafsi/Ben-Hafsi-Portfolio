@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Pompiere&display=swap" rel="stylesheet"> 
 </head>
 <body>
 
 <div id="main">
-    <video id="img-1" src="images/dark-video.mp4" autoplay muted loop></video>
-    <video playsinline id="img-2" src="images/light-video.mp4"  ></video>
+    <!-- playsinline -->
+    <video id="img-1" src="images/smoke_3.mp4" autoplay muted loop></video>
+    <video id="img-2" src="images/smoke_1.mp4"  ></video>
 
     <div id="preloader">
-        <div class="p">WELCOME</div>
+        <div class="welcome-text">WELCOME</div>
     </div>
 
     <div class="control">
-        <div style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 70vh;position: absolute;" >
-            <button class="btn">
+        <div class="btn-div" >
+            <button class="btn-continue">
                 continue
             </button>
         </div>
@@ -48,9 +49,9 @@
     for (video of document.getElementsByTagName("video")) {
          video.setAttribute("playsinline", "");
          video.setAttribute("muted", "");
-         video.play();
+        //  video.play();
     }
-    </script>
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
