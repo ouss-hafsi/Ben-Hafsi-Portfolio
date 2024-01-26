@@ -37,7 +37,7 @@ html,body {
   z-index: 99;
 } */
 
-.welcome-text {
+/* .welcome-text {
     position: absolute;
     font-family: 'Open Sans';
     text-transform: uppercase;
@@ -45,7 +45,7 @@ html,body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-}
+} */
 
 #img-1 {
   width: 100%;
