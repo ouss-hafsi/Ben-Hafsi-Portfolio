@@ -17,7 +17,7 @@
             <h1 class="welcome-to-portfolio">welcome to my portfolio</h1>
             <p class="portfolio-desc">Drag the arrow to the circle to start your experience</p>
         </div>
-        <video id="img-1" src="images/final-bg-dark.mp4" playsinline autoplay loop muted></video>
+        <video id="img-1" src="images/final-bg-dark.mp4" autoplay muted loop></video>
         <div class="control">
             <div class="Thank-you-div" >
                 <p class="thank-you-text">
@@ -335,6 +335,15 @@
         </div>
     </div>
 
+
+
+<script>
+    for (video of document.getElementsByTagName("video")) {
+            video.setAttribute("playsinline", "");
+             video.setAttribute("muted", "");
+             video.play();
+        }
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
