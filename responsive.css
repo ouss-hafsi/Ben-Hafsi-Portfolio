@@ -1,5 +1,5 @@
-/* Styles for mobile and tablets */
-@media only screen and (max-width: 1023px) {
+ /* Styles for mobile and tablets */
+ @media only screen and (max-width: 1023px) {
   .slider-wrapper .slide-button {
       display: none !important;
   }
@@ -40,6 +40,7 @@
       margin-bottom: 30px;
   }
 }
+
 @media screen and (max-width: 695px) {
   .nav-toggle {
       display: block;
@@ -114,19 +115,34 @@
   }
 }
 
+@media only screen and (max-width: 424px) { 
+  .thank-you-text {
+      text-transform: uppercase;
+      animation: blinker 1.5s linear infinite;
+      position: relative;
+      display: none;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 4px;
+      font-family: 'Open sans';
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+     z-index: 20;
+  }
+}
 
 @media screen and (max-width:418px) {
   .resume-btn {
       font-family: 'Open sans';
       font-size: 20px;
-      color: #000;
-      border: none;
-      background-color: #f1f4fd;
+      color: white;
+      border: 1px solid white;
+      background-color: #ffffff17;
       width: 300px;
       height: 50px;
       cursor: pointer;
   } 
 }
+
 @media screen and (max-width: 400px) {
   .presentation-block {
       display: flex;
@@ -153,13 +169,17 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 323px) {
+  .thank-you-text {
+      text-transform: uppercase;
+      animation: blinker 1.5s linear infinite;
+      position: relative;
+      display: none;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 4px;
+      font-family: 'Open sans';
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+      z-index: 20;
+  }
+}

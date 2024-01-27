@@ -1,35 +1,12 @@
-console.log('connected')
 const main = document.querySelector('#main')
 const sectionOne = document.querySelector('.sec-1')
 const sectionTwo = document.querySelector('.sec-2')
 const sectionThree = document.querySelector('.sec-3')
 const sectionFour = document.querySelector('.sec-4')
-// homePage.classList.remove('hide')
-// aboutPage.classList.add('hide')
-const continueBtn = document.querySelector('.btn-continue')
-
-continueBtn.addEventListener('click', function() {
-  sectionOne.classList.remove('hide')
-  sectionTwo.classList.remove('hide')
-  sectionThree.classList.remove('hide')
-  sectionFour.classList.remove('hide')
-  main.classList.add('hide')
-})
-
-//               Landing Page
-paceOptions = {
-    ajax: true,
-    document: true,
-    eventLag: false
-    };
-
-    Pace.on('done', function() {
-    $('.p').delay(500).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
-    $('#preloader').delay(1500).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
-   });
 
 
-//                 Drag Button
+// <----------------------- DRAG BUTTON ----------------------->
+
 const snapPoints = [0, 213];
 let dragMe = Draggable.create(".dragme", {
     type: "y",
@@ -40,32 +17,48 @@ let dragMe = Draggable.create(".dragme", {
     onDragEnd: getThePosition, 
 });
 
+let timeout;
+function myFunction() {
+  timeout = setTimeout(getThePosition, 3000);
+}
+
 function getThePosition() {
-    console.log(this.endY)
+    // console.log(this.endY)
     if (this.endY > 106) {
-        document.querySelector('.welcome-to-portfolio-block').style.opacity = 0
-        document.querySelector('#img-1').style.opacity = 0
-        document.querySelector('#img-2').autoplay = true
-        document.querySelector('#img-2').currentTime = 0
-        document.querySelector('.btn-continue').style.display = "block"
-        document.querySelector('.dragme-child').style.display = "block"
-        document.querySelector('.arrow').style.display = "none"
-        document.querySelector('.dragme-text').style.opacity= 0
-        TweenLite.to('.dragme', {
-            y: 213
-        })
+      document.querySelector('.welcome-to-portfolio-block').style.opacity = 0
+      document.querySelector('.thank-you-text').style.display = "block"
+      document.querySelector('.dragme-child').style.display = "block"
+      document.querySelector('.arrow').style.display = "none"
+      document.querySelector('.dragme-text').style.opacity= 0
+      TweenLite.to('.dragme', {
+          y: 213
+      })
+      setTimeout(function(){
+        sectionOne.classList.remove('hide')
+        sectionTwo.classList.remove('hide')
+        sectionThree.classList.remove('hide')
+        sectionFour.classList.remove('hide')
+        main.classList.add('hide')
+    }, 3000);
+
     } else {
         document.querySelector('.welcome-to-portfolio-block').style.opacity = 1
-        document.querySelector('#img-1').style.opacity = 1
-        document.querySelector('.btn-continue').style.display = 'none'
+        document.querySelector('.thank-you-text').style.display = 'none'
         document.querySelector('.dragme-child').style.display = "none"
         document.querySelector('.arrow').style.display = "block"
         document.querySelector('.dragme-text').style.opacity= 1
         TweenLite.to('.dragme', {
             y: 0
         })
+        sectionOne.classList.add('hide')
+        sectionTwo.classList.add('hide')
+        sectionThree.classList.add('hide')
+        sectionFour.classList.add('hide')
+        main.classList.remove('hide')
     }
 }
+
+
 
 // <----------------------- MENU ----------------------->
 document.querySelector('.nav-toggle').addEventListener('click', function() {
@@ -102,6 +95,15 @@ function closeNav3() {
     overlayThreeD.style.width = "0%";
 } 
 
+const resume = document.querySelector('#my-resume')
+const fourthOverlay = document.querySelector('#resume')
+resume.addEventListener('click', function() {
+  fourthOverlay.style.width = '100%'
+})
+function closeNav4() {
+  fourthOverlay.style.width = "0%";
+} 
+
 // <----------------------------- OPEN TABS   ----------------->
 const movieApp = document.querySelector('#movie-app')
 function openTab() {
@@ -136,9 +138,9 @@ quizzMe.addEventListener('click',function() {
 let skillsSectionAnimation = gsap.timeline({
   scrollTrigger:{
   trigger:'.sec-1',
-  start:'top center',
-  end:'center center',
-  scrub:'false',
+  start:'bottom center',
+  end:'bottom top',
+  scrub:'true',
   // markers:true
 }})
 
@@ -157,118 +159,13 @@ skillsSectionAnimation.to('.skills-text', {
 
 skillsSectionAnimation.fromTo('.resume-btn', {
   opacity:0,
-  x:30,
-},{
-  opacity:1,
-  x:0,
-  duration:1,
-  delay:.5,
-})
-
-// project page animation
-let projectSectionAnimation = gsap.timeline({
-  scrollTrigger:{
-  trigger:'.sec-2',
-  start:'bottom center',
-  end:'bottom top',
-  scrub:'false',
-}})
-
-projectSectionAnimation.fromTo('.work-examples',{
-  opacity:0,
-  y:50,
+  y:30,
 },{
   opacity:1,
   y:0,
   duration:1,
   delay:.5,
- 
 })
-
-projectSectionAnimation.fromTo('.container',{
-  opacity:0,
-  y:50,
-},{
-  opacity:1,
-  y:0,
-  duration:1,
-  delay:.5,
- 
-})
-
-projectSectionAnimation.fromTo('#prev-slide',{
-  opacity:0,
-  x:-50,
-},{
-  opacity:1,
-  x:0,
-  duration:1,
-  delay:.5,
- 
-})
-
-projectSectionAnimation.fromTo('#next-slide',{
-  opacity:0,
-  x:30,
-},{
-  opacity:1,
-  x:0,
-  duration:1,
-  delay:.5,
- 
-})
-
-
-
-
-
-// contact page animation
-let contactSectionAnimation = gsap.timeline({
-  scrollTrigger:{
-  trigger:'.sec-3',
-  start:'100% bottom',
-  end:'300% center',
-  scrub:'false',
-  // markers: true
-}})
-
-contactSectionAnimation.fromTo('.lets-talk-img',{
-  opacity:0,
-  x:80,
-},{
-  opacity:1,
-  x:0,
-  // duration:1,
-  // delay:.5
-})
-
-// let inputAnimation = gsap.timeline({
-//   scrollTrigger:{
-//   trigger:'.sec-3',
-//   start:'200% bottom',
-//   end:'250% center',
-//   scrub:'false',
-//   // markers: true
-// }})
-
-// inputAnimation.to('.input-name', {
-//   width:'44vw',
-//   opacity: '1'
-// })
-
-// inputAnimation.to('.input-btn', {
-//   // width:'30vw',
-//   opacity: '1'
-// })
-
-
-
-
-
-
-
-
-
 
 // <----------------------------- SLIDER ----------------------------->
 const initSlider = () => {
@@ -326,68 +223,6 @@ const initSlider = () => {
 }
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
- 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
