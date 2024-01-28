@@ -224,7 +224,7 @@ let contactSectionAnimation = gsap.timeline({
   start:'300% center',
   end:'300% top',
   scrub:'true',
-  markers:true
+  // markers:true
 }})
 
 contactSectionAnimation.fromTo('.lets-talk-img', {
