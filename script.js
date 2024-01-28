@@ -167,6 +167,56 @@ skillsSectionAnimation.fromTo('.resume-btn', {
   delay:.5,
 })
 
+// projects page animation
+let projectSectionAnimation = gsap.timeline({
+  scrollTrigger:{
+  trigger:'.sec-1',
+  start:'200% center',
+  end:'200% top',
+  scrub:'true',
+  // markers:true
+}})
+
+projectSectionAnimation.fromTo('.work-examples', {
+  opacity:0,
+  y:30,
+},{
+  opacity:1,
+  y:0,
+  duration:1,
+  delay:.5,
+})
+
+projectSectionAnimation.fromTo('.container', {
+  opacity:0,
+  y:30,
+},{
+  opacity:1,
+  y:0,
+  duration:1,
+  delay:.5,
+})
+
+projectSectionAnimation.fromTo('#prev-slide', {
+  opacity:0,
+  x:-30,
+},{
+  opacity:1,
+  x:0,
+  duration:1,
+  delay:.5,
+})
+
+projectSectionAnimation.fromTo('#next-slide', {
+  opacity:0,
+  x:30,
+},{
+  opacity:1,
+  x:0,
+  duration:1,
+  delay:.5,
+})
+
 // <----------------------------- SLIDER ----------------------------->
 const initSlider = () => {
   const imageList = document.querySelector(".slider-wrapper .image-list");
