@@ -217,6 +217,56 @@ projectSectionAnimation.fromTo('#next-slide', {
   delay:.5,
 })
 
+// contact page animation
+let contactSectionAnimation = gsap.timeline({
+  scrollTrigger:{
+  trigger:'.sec-1',
+  start:'300% center',
+  end:'300% top',
+  scrub:'true',
+  markers:true
+}})
+
+contactSectionAnimation.fromTo('.lets-talk-img', {
+  opacity:0,
+  y:30,
+},{
+  opacity:1,
+  y:0,
+  duration:1,
+  delay:.5,
+})
+
+contactSectionAnimation.fromTo('.input-block', {
+  opacity:0,
+  y:30,
+},{
+  opacity:1,
+  y:0,
+  duration:1,
+  delay:.5,
+})
+
+contactSectionAnimation.fromTo('.input-btn', {
+  opacity:0,
+  y:30,
+},{
+  opacity:1,
+  y:0,
+  duration:1,
+  delay:.5,
+})
+
+contactSectionAnimation.fromTo('.socialMedia-contactPage', {
+  opacity:0,
+  y:30,
+},{
+  opacity:1,
+  y:0,
+  duration:1,
+  delay:.5,
+})
+
 // <----------------------------- SLIDER ----------------------------->
 const initSlider = () => {
   const imageList = document.querySelector(".slider-wrapper .image-list");
