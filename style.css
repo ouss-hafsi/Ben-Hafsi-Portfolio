@@ -439,22 +439,23 @@ nav li a {
 }
 
 .presentation-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 60vh;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  gap: 46px;
+  height: 70vh;
+  flex-direction: column;
 }
 
 .presentation-text {
-    font-family: 'Open sans',sans-serif;
-    font-size: 20px;
-    font-weight: 200;
-    color: white;
-    max-width: 800px;
-    margin-left: 10px;
-    margin-right: 10px;
+  font-family: 'Open sans',sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  max-width: 800px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .span-description {
@@ -605,13 +606,6 @@ nav li a {
     }
 }
 /* SCROLL */
-
-.scroll-down-div {
-    display: flex; 
-    justify-content: center;
-    width: 100vw;
-}
-
 .mouse {
     margin: 0 auto;
     display: block;
