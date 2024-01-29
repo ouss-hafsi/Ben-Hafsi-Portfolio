@@ -366,16 +366,19 @@ nav li a {
 }
             
 .open  span:nth-child(1) {
+  position: fixed;
     top: 50%;          
     transform: translateX(-50%) translateY(0) rotate(45deg);
     transition: top .3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
 }
 
 .open span:nth-child(2) {
+  position: fixed;
     opacity: 0;
 }
 
 .open  span:last-child {
+  position: fixed;
     top: 50%;
     transform: translateX(-50%) translateY(0) rotate(-45deg);
     transition: bottom .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) ,transform .3s cubic-bezier(0.21, 0.83, 0.26, 0.87) .3s;
@@ -389,7 +392,10 @@ nav li a {
     height: 100%;
     padding: 50px;
     background: hsl(0 0% 100% / 0.1);
+    /* -webkit-backdrop-filter: blur(1rem); */
+    -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
+    /* -webkit-filter: blur(5px); */
     transform: translateX(100%);
     transition: all .2s ease-out;
 }
