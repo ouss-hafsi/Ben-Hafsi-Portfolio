@@ -4,11 +4,9 @@
   box-sizing: border-box;
 }
 
-/* changes */
-.hide-overlay {
+.overflow-menu-overlay {
   overflow: hidden;
 }
-/**/
 
 body {
   background-color: black;
@@ -401,8 +399,6 @@ nav li a {
     height: 100%;
     padding: 50px;
     background: hsl(0 0% 100% / 0);
-    /* background: hsla(0, 0%, 100%, 0); */
-    /* -webkit-backdrop-filter: blur(1rem); */
     -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
     transform: translateX(100%);

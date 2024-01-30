@@ -64,9 +64,8 @@ function getThePosition() {
 // <----------------------- MENU ----------------------->
 document.querySelector('.nav-toggle').addEventListener('click', function() {
     this.classList.toggle('open');
-    // body.classList.add('hide-overlay')
     document.querySelector('.overlay-menu').classList.toggle('open');
-    document.querySelector('body').classList.toggle('hide-overlay');
+    document.querySelector('body').classList.toggle('overflow-menu-overlay');
     document.querySelector('.nav-toggle').classList.toggle('nav-toggle-position');
 })
 
