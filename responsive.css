@@ -32,6 +32,7 @@
   .input-btn {
       width: 91vw;
       height: 50px;
+      color: black;
       background-color: #f1f4fd;
       cursor: pointer;
   }
