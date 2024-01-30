@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+/* changes */
+.hide-overlay {
+  overflow: hidden;
+}
+/**/
 
 body {
   background-color: black;
@@ -339,6 +344,10 @@ nav li a {
     z-index: 10;
 }
 
+.nav-toggle-position {
+  position: fixed;
+}
+
 .nav-toggle span {
     position: absolute;
     left: 50%;
@@ -391,11 +400,11 @@ nav li a {
     z-index:2;
     height: 100%;
     padding: 50px;
-    background: hsl(0 0% 100% / 0.1);
+    background: hsl(0 0% 100% / 0);
+    /* background: hsla(0, 0%, 100%, 0); */
     /* -webkit-backdrop-filter: blur(1rem); */
     -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
-    /* -webkit-filter: blur(5px); */
     transform: translateX(100%);
     transition: all .2s ease-out;
 }

@@ -1,3 +1,4 @@
+const body = document.querySelector('body')
 const main = document.querySelector('#main')
 const sectionOne = document.querySelector('.sec-1')
 const sectionTwo = document.querySelector('.sec-2')
@@ -63,8 +64,36 @@ function getThePosition() {
 // <----------------------- MENU ----------------------->
 document.querySelector('.nav-toggle').addEventListener('click', function() {
     this.classList.toggle('open');
+    // body.classList.add('hide-overlay')
     document.querySelector('.overlay-menu').classList.toggle('open');
-  })
+    document.querySelector('body').classList.toggle('hide-overlay');
+    document.querySelector('.nav-toggle').classList.toggle('nav-toggle-position');
+})
+
+const projectsNav = document.querySelector('#projects-nav')
+projectsNav.addEventListener('click', function(){
+  document.querySelector('.overlay-menu').style.background='hsl(0deg 0% 0% / 39%)'
+})
+
+const homeNav = document.querySelector('#home-nav')
+homeNav.addEventListener('click', function(){
+  document.querySelector('.overlay-menu').style.background='hsl(0 0% 100% / 0.1)'
+})
+
+const skillsNav = document.querySelector('#skills-nav')
+skillsNav.addEventListener('click', function(){
+  document.querySelector('.overlay-menu').style.background='hsl(0 0% 100% / 0.1)'
+})
+
+const contactNav = document.querySelector('#contact-nav')
+contactNav.addEventListener('click', function(){
+  document.querySelector('.overlay-menu').style.background='hsl(0 0% 100% / 0.1)'
+})
+
+
+
+
+
 
 // <----------------------- OVERLAYS ----------------------->
 const nextProject = document.querySelector('#next-radio')
