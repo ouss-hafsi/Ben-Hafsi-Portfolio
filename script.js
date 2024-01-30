@@ -77,17 +77,17 @@ projectsNav.addEventListener('click', function(){
 
 const homeNav = document.querySelector('#home-nav')
 homeNav.addEventListener('click', function(){
-  document.querySelector('.overlay-menu').style.background='hsl(0 0% 100% / 0.1)'
+  document.querySelector('.overlay-menu').style.background='hsl(0 0% 100% / 0)'
 })
 
 const skillsNav = document.querySelector('#skills-nav')
 skillsNav.addEventListener('click', function(){
-  document.querySelector('.overlay-menu').style.background='hsl(0 0% 100% / 0.1)'
+  document.querySelector('.overlay-menu').style.background='hsl(0 0% 100% / 0)'
 })
 
 const contactNav = document.querySelector('#contact-nav')
 contactNav.addEventListener('click', function(){
-  document.querySelector('.overlay-menu').style.background='hsl(0 0% 100% / 0.1)'
+  document.querySelector('.overlay-menu').style.background='hsl(0 0% 100% / 0)'
 })
 
 
