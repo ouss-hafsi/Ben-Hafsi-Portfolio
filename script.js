@@ -123,14 +123,14 @@ function closeNav3() {
     overlayThreeD.style.width = "0%";
 } 
 
-const resume = document.querySelector('#my-resume')
-const fourthOverlay = document.querySelector('#resume')
-resume.addEventListener('click', function() {
-  fourthOverlay.style.width = '100%'
-})
-function closeNav4() {
-  fourthOverlay.style.width = "0%";
-} 
+// const resume = document.querySelector('#my-resume')
+// const fourthOverlay = document.querySelector('#resume')
+// resume.addEventListener('click', function() {
+//   fourthOverlay.style.width = '100%'
+// })
+// function closeNav4() {
+//   fourthOverlay.style.width = "0%";
+// } 
 
 // <----------------------------- OPEN TABS   ----------------->
 const movieApp = document.querySelector('#movie-app')
